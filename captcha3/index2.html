@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="./jquery-1.11.0.min.js"></script>
+<style>
+div {
+    display:inline-block;
+    position:relative;
+  
+}
+#parentdiv {
+margin-left:300px;
+margin-top:200px
+}
+#two{
+  margin-left:10px;
+  margin-top:3px;
+  border-color:black;
+  border-width:4px;
+  border-style:solid;
+}
+#three{
+  margin-left:10px;
+  margin-top:3px;
+  border-color:white;
+  border-size:4px;
+  border-style:solid;
+}
+#seven{
+  margin-left:10px;
+  margin-top:3px;
+  border-color:white;
+  border-size:4px;
+  border-style:solid;
+}
+#text{
+font-family: Sans-Serif, monaco, monospace;
+font-size:30px;
+margin-left:220px;
+}
+#twoimage{
+  height:200px;
+  width:240px;
+  cursor:pointer;
+}
+#threeimage{
+height:200px;
+width:240px;
+cursor:pointer;
+}
+#fourimage{
+  height:200px;
+  width:240px;
+  cursor:pointer;
+}
+#parentdivtwo{
+border-color:black;
+border-size:4px;
+border-style:solid;
+height:50px;
+width:785px;
+border-radius:10px;
+}
+#foo{
+  font-family: Sans-Serif, monaco, monospace;
+  font-size:35px;
+  margin-left:20px;
+}
+#fooone{
+font-family: Sans-Serif, monaco, monospace;
+font-size:35px;
+margin-left:200px;
+}
+#footwo{
+font-family: Sans-Serif, monaco, monospace;
+font-size:35px;
+margin-left:200px;
+}
+</style>
+<script>
+var i=0;
+var foo = function(){
+  if(i==0){
+    var a=document.getElementById('two');
+    a.style.borderColor='white';
+    var b=document.getElementById('foo');
+    var c=document.getElementById('fooone');
+    var d=document.getElementById('footwo');
+    var l=document.getElementById('three');
+    l.style.borderColor = "black";
+    b.innerHTML='Mountain';
+    c.innerHTML="Human";
+    d.innerHTML="Bicycle";
+    c.style.marginLeft="150px";
+    d.style.marginTop="-50px";
+    d.style.marginLeft="180px";
+    i="true";
+  }
+  else{
+    alert('Iimage will reload');
+  }
+}
+var fooone = function(){
+    if(i=="true"){
+    var a=document.getElementById('three');
+    a.style.borderColor='white';
+    var f=document.getElementById('foo');
+    var g=document.getElementById('fooone');
+    var h=document.getElementById('footwo');
+    var l=document.getElementById('seven');
+    l.style.borderColor = "black";
+    f.innerHTML='Car';
+    g.innerHTML="Football";
+    h.innerHTML="Bicycle";
+    i="falsee"
+  }
+  else{
+    alert('Image will reload');
+  } 
+}
+
+var footwo = function(){
+    if(i=="falsee"){
+    var a=document.getElementById('seven');
+    a.style.borderColor='white';
+    var f=document.getElementById('foo');
+    var g=document.getElementById('fooone');
+    var h=document.getElementById('footwo');
+   alert('Captcha verifed :)')
+  }
+  else{
+    alert('Image will reload');
+  } 
+}
+</script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+  <div id="parentdiv">
+  <p id="text">Identify the objects?</p>
+  <div id="two"><img  id="twoimage" src="./images1.gif"/></div>
+  <div id="three"><img id="threeimage" src="./images2.jpg"/></div>
+  <div id="seven"><img  id="fourimage" src="./images3.gif"/></div>
+  <br>
+  <div id="parentdivtwo">
+    <div  id="foo" onclick="foo()">Cat</div>
+    <div id="fooone" onclick="fooone()">Mountain</div>
+    <div  id="footwo" onclick="footwo()">Human</div>
+  </div>
+  </div>
+</body>
+</html>
